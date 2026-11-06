@@ -1,0 +1,49 @@
+file,column,description_EN,unit,row_unit
+forecast/units.csv,source_year,Host-source calendar year,year,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,outcome_year,Nymph outcome calendar year,year,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,Plot,"Cary grid code GC,GE,HC,HE,TC,TE",identifier,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,mouse,Observed white-footed mouse abundance index,hosts per grid index; original census estimator,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,chip,Eastern chipmunk abundance index,hosts per grid index; original census estimator,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,larvae,Source-year peak questing larval density,larvae per m2,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,past_gdd,Source-year accumulated growing degree-days,degree days,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,fed_m,Mouse abundance index multiplied by mean attached larval burden,host burden index,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,fed_c,Chipmunk host abundance index multiplied by attached mean larval burden,host burden index,one Cary plot-year paired with next-year nymph observations
+forecast/units.csv,outcome,Next-year peak nymphal density scaled by 450,nymphs per 450 m2,one Cary plot-year paired with next-year nymph observations
+forecast/raw.csv,Year,Calendar year in original source,year,one source-table row; analyses select rows with a grid identifier
+forecast/raw.csv,Plot,"Cary grid code GC,GE,HC,HE,TC,TE",identifier,one source-table row; analyses select rows with a grid identifier
+forecast/raw.csv,nymph_peak_t,Peak nymphal density in the original grid-year,nymphs per m2,one source-table row; analyses select rows with a grid identifier
+forecast/old_predictions.csv,outcome_year,Nymph outcome calendar year,year,one held-out Cary plot-year per model
+forecast/old_predictions.csv,Plot,"Cary grid code GC,GE,HC,HE,TC,TE",identifier,one held-out Cary plot-year per model
+forecast/old_predictions.csv,model,Original model code host_only or fed_proxy,category,one held-out Cary plot-year per model
+forecast/old_predictions.csv,predicted,Nymph-density forecast on the observation scale,nymphs per 450 m2,one held-out Cary plot-year per model
+forecast/scotland.csv,Site_code,Original Scottish forest site code; surrounding whitespace is stripped for matching,identifier,one Scottish forest and survey visit
+forecast/scotland.csv,Year,Calendar year in original source,year,one Scottish forest and survey visit
+forecast/scotland.csv,Visit,"Survey month label May, July or September",category,one Scottish forest and survey visit
+forecast/scotland.csv,DON_100,Scottish questing nymph density scaled to 100 m2,nymphs per 100 m2,one Scottish forest and survey visit
+forecast/scotland.csv,k,Number of B. burgdorferi sensu lato positive nymphs,count,one Scottish forest and survey visit
+forecast/scotland.csv,n,Number of assayed nymphs,count,one Scottish forest and survey visit
+forecast/modern.csv,outcome_year,Nymph outcome calendar year,year,one Cary grid-year in the modern risk cohort
+forecast/modern.csv,Plot,"Cary grid code GC,GE,HC,HE,TC,TE",identifier,one Cary grid-year in the modern risk cohort
+forecast/modern.csv,DON_mean,Cary seasonal-mean nymphal density,nymphs per 450 m2,one Cary grid-year in the modern risk cohort
+forecast/modern.csv,NIP,Cary observed infected proportion k/n,proportion,one Cary grid-year in the modern risk cohort
+forecast/transitions.csv,Plot,"Cary grid code GC,GE,HC,HE,TC,TE",identifier,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,from_year,Starting outcome year of transition,year,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,to_year,Ending outcome year of transition,year,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,DON0,Seasonal mean nymph density in starting year,nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,DON1,Seasonal mean nymph density in ending year,nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,NIP0,Observed infection proportion at starting year,proportion,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,NIP1,Observed infection proportion at ending year,proportion,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,DIN0,Starting-year observed DON times NIP,infected nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,DIN1,Ending-year observed DON times NIP,infected nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,delta_DIN,Ending minus starting observed DIN,infected nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,quantity_contribution,Mean of endpoint NIP times change in DON,infected nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,infection_contribution,Mean of endpoint DON times change in NIP,infected nymphs per 450 m2,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,opposing_channels,Quantity and infection contributions have opposite signs,boolean,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,risk_direction_opposite_DON,Observed DIN direction differs from DON direction,boolean,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,posterior_prob_risk_direction_opposite_DON,Conditional Jeffreys probability of opposite directions at fixed DON,probability,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,quantity_decrease_infection_increase,Observed quantity decreases and infection contribution increases,boolean,one Cary grid and adjacent-year risk comparison
+forecast/transitions.csv,declining_quantity_rising_risk,Observed DON decreases and DIN increases,boolean,one Cary grid and adjacent-year risk comparison
+forecast/pcr.csv,Grid,Original Cary grid string identifier,identifier,one assayed nymph record
+forecast/pcr.csv,Year,Calendar year in original source,year,one assayed nymph record
+forecast/pcr.csv,month,PCR collection month; missing retained outside both fixed windows,calendar month,one assayed nymph record
+forecast/pcr.csv,B.burgdorferi,"PCR outcome for B. burgdorferi: 1 positive,0 negative, missing not in denominator",binary,one assayed nymph record

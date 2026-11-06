@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lyme-paper1"
+version = "0.3.0"
+description = "Host larval burdens, future-year forecasts, site priorities and conditional infected-nymph output"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<4", "scipy>=1.13,<2", "mpmath>=1.3,<2"]
+authors = [{name="Xudong Ding"}, {name="Xinzhu Meng"}]
+
+[project.scripts]
+lyme-paper1 = "lyme_paper1.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lyme_paper1 = ["_engines/*.py", "workflows/*.py"]
+
+[project.optional-dependencies]
+full = ["statsmodels>=0.14.4,<0.15", "scikit-learn>=1.6,<2", "matplotlib>=3.9,<4", "openpyxl>=3.1,<4", "threadpoolctl>=3.6,<4"]
